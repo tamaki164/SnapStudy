@@ -61,7 +61,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Snap"/>
                                                 <connections>
-                                                    <segue destination="WJQ-be-IA1" kind="show" id="bze-9P-X0C"/>
+                                                    <segue destination="dur-Vk-DEo" kind="show" id="BCU-fg-CuB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-Yt-kOm">
@@ -89,43 +89,120 @@
             </objects>
             <point key="canvasLocation" x="108" y="26"/>
         </scene>
-        <!--SnapTop-->
-        <scene sceneID="DWz-ow-MBI">
+        <!--EditCategory-->
+        <scene sceneID="VdX-oA-m4s">
             <objects>
-                <viewController title="SnapTop" id="WJQ-be-IA1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ya6-Im-dkt">
+                <viewController title="EditCategory" id="dur-Vk-DEo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6l-Pv-ZTy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LaD-Wp-vEw">
-                                <rect key="frame" x="0.0" y="164" width="375" height="403"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8v-eO-2Bu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Edit Category"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-B2-pKb">
-                                        <rect key="frame" x="0.0" y="201.5" width="375" height="201.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Edit Quiz"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vHR-pg-yfZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="LyF-4M-ws3" detailTextLabel="48a-2M-6hG" style="IBUITableViewCellStyleSubtitle" id="sas-ny-4HP">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sas-ny-4HP" id="4kZ-ew-8vO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LyF-4M-ws3">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="48a-2M-6hG">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="LaD-Wp-vEw" secondAttribute="bottom" constant="100" id="9np-GJ-Fg8"/>
-                            <constraint firstItem="LaD-Wp-vEw" firstAttribute="top" secondItem="bA2-eb-JGg" secondAttribute="top" constant="100" id="Nyq-Mj-DBo"/>
-                            <constraint firstAttribute="trailing" secondItem="LaD-Wp-vEw" secondAttribute="trailing" id="QqF-c4-ZFt"/>
-                            <constraint firstItem="LaD-Wp-vEw" firstAttribute="leading" secondItem="Ya6-Im-dkt" secondAttribute="leading" id="XqD-tF-2cY"/>
+                            <constraint firstItem="vHR-pg-yfZ" firstAttribute="leading" secondItem="bRW-PW-jM4" secondAttribute="leading" id="54D-of-fW4"/>
+                            <constraint firstItem="bRW-PW-jM4" firstAttribute="trailing" secondItem="vHR-pg-yfZ" secondAttribute="trailing" id="7rF-LG-mwt"/>
+                            <constraint firstItem="vHR-pg-yfZ" firstAttribute="top" secondItem="bRW-PW-jM4" secondAttribute="top" id="D9b-6K-OzY"/>
+                            <constraint firstItem="bRW-PW-jM4" firstAttribute="bottom" secondItem="vHR-pg-yfZ" secondAttribute="bottom" id="OG2-LQ-Qeh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bA2-eb-JGg"/>
+                        <viewLayoutGuide key="safeArea" id="bRW-PW-jM4"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Edit Category" id="NDR-2r-TtG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w1k-U4-gdS"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2kE-FZ-R9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edq-Pn-brh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="26"/>
+            <point key="canvasLocation" x="900" y="26"/>
+        </scene>
+        <!--Edit Quiz-->
+        <scene sceneID="P92-Lk-SgT">
+            <objects>
+                <viewController title="Edit Quiz" id="x9H-BF-ODN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vUB-vh-mBj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wXB-K0-v19">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Vdq-6g-SSt" detailTextLabel="BLP-dY-Jym" style="IBUITableViewCellStyleSubtitle" id="ztT-7d-Zeq">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ztT-7d-Zeq" id="wHw-WX-vR6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vdq-6g-SSt">
+                                                    <rect key="frame" x="15" y="5" width="34" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BLP-dY-Jym">
+                                                    <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wXB-K0-v19" firstAttribute="top" secondItem="Wxi-qt-EPI" secondAttribute="top" id="6j1-xY-mnp"/>
+                            <constraint firstItem="Wxi-qt-EPI" firstAttribute="trailing" secondItem="wXB-K0-v19" secondAttribute="trailing" id="E1P-Mp-KKb"/>
+                            <constraint firstItem="wXB-K0-v19" firstAttribute="leading" secondItem="Wxi-qt-EPI" secondAttribute="leading" id="Iev-8R-oBA"/>
+                            <constraint firstItem="Wxi-qt-EPI" firstAttribute="bottom" secondItem="wXB-K0-v19" secondAttribute="bottom" id="L35-Oc-mrg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wxi-qt-EPI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Quiz" id="KfY-0A-WNB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VoK-OD-Ukd"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ls-dR-gKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="26"/>
         </scene>
     </scenes>
 </document>
